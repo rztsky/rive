@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rive - GigaStory - 25.05.2025</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Подключаем Rive Runtime через CDN -->
-    <script src="https://unpkg.com/@rive-app/canvas@1.0.106"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rive на смартфоне</title>
+  <!-- Подключаем Rive.js -->
+  <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+  <style>
+    body, html { 
+      margin: 0; 
+      padding: 0; 
+      overflow: hidden; 
+      height: 100%;
+    }
+    #canvas {
+      width: 100%;
+      height: 100vh;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Rive Animation Demo</h1>
-        <canvas id="canvas" width="500" height="500"></canvas>
-        <div class="controls">
-            <button id="play">Play</button>
-            <button id="pause">Pause</button>
-            <button id="reset">Reset</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <!-- Контейнер для анимации -->
+  <canvas id="canvas"></canvas>
+
+  <script>
+    // Загружаем анимацию
+    const rive = new rive.Rive({
+      src: "animation.riv", // Путь к вашему .riv-файлу
+      canvas: document.getElementById("canvas"),
+      autoplay: true,
+      layout: new rive.Layout({
+        fit: "cover", // Масштабирует анимацию под экран
+        alignment: "center"
+      })
+    });
+  </script>
 </body>
 </html>
