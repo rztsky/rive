@@ -1,6 +1,6 @@
 // Инициализация Rive
 const rive = new rive.Rive({
-    src: 'assets/animation.riv', // Путь к вашему .riv файлу
+    src: 'animation.riv', // Путь к вашему .riv файлу
     canvas: document.getElementById('canvas'),
     autoplay: false,
     stateMachines: 'State Machine 1', // Имя state machine из Rive Editor
