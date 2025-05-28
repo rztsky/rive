@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Программа — Дизайн-выходные Казань</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    .schedule-container {
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      position: relative;
+    }
+    .schedule-table {
+      border-collapse: collapse;
+      position: relative;
+    }
+    .schedule-table th,
+    .schedule-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      min-width: 150px;
+      max-width: 300px;
+      vertical-align: top;
+    }
+    .schedule-table th {
+      background: #f0f0f0;
+      text-align: center;
+      font-weight: bold;
+    }
+    .fixed-top {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .fixed-left {
+      position: sticky;
+      left: 0;
+      background: #f9f9f9;
+      z-index: 1;
+    }
+    .fixed-corner {
+      z-index: 3 !important;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 4px;
+      padding: 4px;
+      border-radius: 4px;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .scrollable-cell {
+      max-height: 150px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="schedule-container">
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th class="fixed-top fixed-left fixed-corner">Время</th>
+          <th class="fixed-top">Главный зал</th><th class="fixed-top">Зал 2</th><th class="fixed-top">Зал 3</th><th class="fixed-top">Зал 4</th><th class="fixed-top">Зал 5</th><th class="fixed-top">Зал 6</th><th class="fixed-top">Зал 7</th><th class="fixed-top">Зал 8</th><th class="fixed-top">Зал 9</th><th class="fixed-top">Зал 10</th><th class="fixed-top">Зал 11</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
